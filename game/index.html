@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>The Witcher</title>
+  <meta name='viewport' content='width=device-width, user-scalable=no initial-scale=1'>
+  <link rel='icon' href="/img/1.ico" type=”image/x-icon”>
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel='stylesheet' href='index.css'>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+
+    <div class="page">
+      <div class="box">
+        <div id="healthBar_one">
+        </div>
+        <div id="timer">
+        </div>
+        <div id="healthBar_two">
+        </div>
+      </div>
+      <div id="alertText">
+      </div>
+      <div class="menu">
+        <div class="logo">
+          <img src="img/Menu/main_logo.png" alt="">
+          <div class="selection">
+            <button tabindex="0" onclick="StartGame()">Start</button>
+            <button tabindex="0" onclick="SwitchSelection('characters')">Сharacter's</button>
+            <button tabindex="0" onclick="SwitchSelection('story')">Story</button>
+            <button tabindex="0" onclick="SwitchSelection('options')">Options</button>
+          </div>
+        </div>
+        <div class="subbox">
+          <div class="options">
+            <form class="form" name="form" onsubmit="soundInGame('options'); return false;">
+              <div class="property">
+
+                <h1>Фоновая музыка</h1><br>
+                <table>
+                  <tr>
+                    <td>Вкл</td>
+                    <td><input class="music" name="music" type="radio" value="1" checked></td>
+                  </tr>
+                  <tr>
+                    <td>Выкл</td>
+                    <td><input class="music" name="music" type="radio" value="0"></td>
+                  </tr>
+                </table>
+                <h1>Звуки игры</h1><br>
+                <table>
+                  <tr>
+                    <td>Вкл</td>
+                    <td><input class="soundGame" name="soundGame" type="radio" value="1" checked></td>
+                  </tr>
+                  <tr>
+                    <td>Выкл</td>
+                    <td><input class="soundGame" name="soundGame" type="radio" value="0"></td>
+                  </tr>
+                </table>
+                <h1>Уровнять силу Геральта и Орианы</h1><br>
+                <table>
+                  <tr>
+                    <td>Вкл</td>
+                    <td><input class="difficulty" name="difficulty" type="radio" value="1"></td>
+                  </tr>
+                  <tr>
+                    <td>Выкл</td>
+                    <td><input class="difficulty" name="difficulty" type="radio" value="0" checked></td>
+                  </tr>
+                </table>
+                <img src="img/Menu/Options/guide.png" style="height: 251px; width: 500px ;" alt="">
+              </div>
+              <div class="buttonn">
+                <button type="submit">Принять</button>
+              </div>
+
+            </form>
+          </div>
+          <div class="characters">
+            <div class="geralt">
+              <img src="img/Menu/Characters/Geralt.png" style="height: 180px;" alt="">
+              <div class="text">
+                <font size="4" color="#bbab81">Г</font>е́ральт из Ри́вии (ориг. Geralt z Rivii) — главный герой
+                литературной саги и протагонист последующих игр,
+                ведьмак, профессиональный охотник на монстров, один из лучших фехтовальщиков Севера.<br>
+
+                Имеет романтический интерес к двум чародейкам: Йеннифэр и Трисс. Его лучшими друзьями помимо ведьмаков
+                из
+                Школы Волка являются бард Лютик, краснолюд Золтан Хивай и высший вампир Эмиель Регис.
+              </div>
+            </div>
+            <div class="versus">
+              <img src="img/Menu/Characters/vs.png" style="height: 160px;" alt="">
+            </div>
+            <div class="vampire">
+              <img src="img/Menu/Characters/Vampire.png" style="height: 180px;" alt="">
+              <div class="text">
+                <font size="4" color="#bbab81">О</font>риана (ориг. Orianna) — Tуссентская богатая
+                аристократка, покровительница людей искусства, организующая тайные встречи «Мандрагоры».
+                Брукса(вампирша)
+                и
+                давняя подруга Региса, с которой он познакомился до своей встречи с Геральтом.
+              </div>
+            </div>
+          </div>
+          <div class="story">
+            <div class="text">
+              <p>
+                <font size="4" color="#bbab81">П</font>о сюжету Геральт встречает безымянную женщину , которая поет
+                навязчивую колыбельную. Он толком ее не знал
+                и пришел потому, что горожане обвинили ее (предположительно в убийстве). Он не
+                был до конца уверен, что она виновна, поэтому сначала подошел к ней спокойно. Она пела вампирскую
+                колыбельную (песню, которую вампиры поют своим детям), описывая ведьмаков как монстров из своего
+                детства, тех, кто охотится на себе подобных ради денег. На это намекает сцена, когда она находит куклу.
+                Когда Геральт противостоял ей, она назло спровоцировала его, и он воспринял это как признание вины. Они
+                сражались друг с другом, воспринимая друг друга как монстра.
+              </p><br>
+
+              <p>В конце концов Геральт хотел взять трофей в качестве доказательства, чтобы получить деньги от горожан,
+                но
+                потерял сознание, увидев, как она снова принимает человеческий облик и страдает в агонии из-за яда
+                Черной
+                крови. Когда Геральт очнулся, он понял, что у него недостаточно доказательств ее вины, и пришел в ужас
+                от
+                того, что сделал. Поэтому он не взял трофей и в спешке ускакал. Песня в конце подчеркивает этот
+                момент, говоря, что «ведьмак съест тебя целиком», намекая на то, что темная сторона Геральта захватывает
+                его, снова задавая вопрос «кто настоящий монстр»?</p>
+            </div>
+            <div class="img">
+              <img src="img/Menu/Story/fight.png" style="height: 200px; margin: 20px" alt="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="pause">
+        <div class="logo">
+          <img src="img/Menu/main_logo.png" alt="">
+          <div class="selection">
+            PAUSE
+          </div>
+        </div>
+      </div>
+
+
+      <canvas></canvas>
+    </div>
+  </div>
+  <script src="/js/jquery-3.6.0.min.js"></script>
+  <script src="/js/sound.js"></script>
+  <script src="/js/classes.js"></script>
+  <script src="/js/functions.js"></script>
+  <script src="/js/entity.js"></script>
+  <script src="/js/movement.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
